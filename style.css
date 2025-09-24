@@ -1,0 +1,187 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+header {
+  background: #1e3c72;
+  color: #fff;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.btn {
+  background: #ff9800;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #e68900;
+}
+
+/* Services */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+.services h2 {
+  margin-bottom: 30px;
+}
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.service-card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  background: #e9ecef;
+}
+
+/* About */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+.about p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Contact */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input, 
+.contact-form textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.contact-form button {
+  background: #1e3c72;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-form button:hover {
+  background: #163057;
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  margin-top: 20px;
+}
+.whatsapp a {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.whatsapp a:hover {
+  background: #1ebe5d;
+}
+
+/* Footer */
+footer {
+  background: #1e3c72;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1e3c72;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    width: 200px;
+    border-radius: 6px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
